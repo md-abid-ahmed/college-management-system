@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RADS College - Timetable</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+    }
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .options-list {
+      list-style: none;
+      padding: 0;
+      width: 70%;
+      margin-left: 0px;
+      display: inline-block;
+    }
+    .options-list li {
+      margin-bottom: 20px;
+    }
+    .options-list li a {
+      display: block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      text-align: center;
+    }
+    .options-list li a:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+    .timetable-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .timetable-dropdown {
+      font-size: 20px;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    .timetable-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .timetable-table th,
+    .timetable-table td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .sync-button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .sync-button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+    /* Custom Styles */
+    /* Add your additional custom styles here */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+    }
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .options-list {
+      list-style: none;
+      padding: 0;
+      width: 70%;
+      margin-left: 0px;
+      display: inline-block;
+    }
+    .options-list li {
+      margin-bottom: 20px;
+    }
+    .options-list li a {
+      display: block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      text-align: center;
+    }
+    .options-list li a:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+    .timetable-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .timetable-dropdown {
+      font-size: 20px;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    .timetable-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .timetable-table th,
+    .timetable-table td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .sync-button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .sync-button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="header">
+
+    <h1>RADS College</h1>
+    
+  </div>
+  <h2 style="text-align: center; color: #007bff;">TIMETABLE</h2>
+  <div class="container">
+    <div class="options-list">
+      <ul>
+      
+      </ul>
+    </div>
+    <div class="timetable-container">
+      <div class="timetable-dropdown">
+        <label for="timetable-options">Select Timetable:</label>
+        <select id="timetable-options">
+          <option value="fastrack-fall">Fastrack Fall</option>
+          <option value="win-sem">Winter Semester</option>
+          <option value="fall-sem">Fall Semester</option>
+        </select>
+      </div>
+      <table class="timetable-table">
+        <thead>
+          <tr>
+            <th>Day/Time</th>
+            <th>9:00 AM</th>
+            <th>10:00 AM</th>
+            <th>11:00 AM</th>
+            <th>12:00 PM</th>
+            <th>1:00 PM</th>
+            <th>2:00 PM</th>
+            <th>3:00 PM</th>
+            <th>4:00 PM</th>
+            <th>5:00 PM</th>
+            <th>6:00 PM</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+          <tr>
+            <td>Monday</td>
+            <td>Maths</td>
+            <td>DBMS</td>
+            <td>OOPS</td>
+            <td>OS</td>
+            <td>Maths</td>
+            <td>DBMS</td>
+            <td>OOPS</td>
+            <td>OS</td>
+            <td>Maths</td>
+            <td>DBMS</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>DBMS</td>
+            <td>OS</td>
+            <td>OOPS</td>
+            <td>Maths</td>
+            <td>DBMS</td>
+            <td>OS</td>
+            <td>OOPS</td>
+            <td>Maths</td>
+            <td>DBMS</td>
+            <td>OS</td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <a href="#" class="sync-button">Sync with Google Calendar</a>
+    </div>
+  </div>
+  <footer class="footer">
+   
+  </footer>
+  <script>
+   
+    document.querySelector('.sync-button').addEventListener('click', function () {
+      
+      alert('Syncing with Google Calendar... (This is a simulation)');
+    });
+  </script>
+   <footer class="footer">
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <p>&copy; RADS College 2019-2025. All rights reserved.</p>
+      <p>Contact Us:</p>
+      <p>Email: Dean@radscollege.edu</p>
+      <p>Phone: +91 6303056564</p>
+    </div>
+  </footer>
+</body>
+</html>

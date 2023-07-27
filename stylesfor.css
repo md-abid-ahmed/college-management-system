@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #00b4db, #0083b0);
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .header {
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .welcome-message {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  .options-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .options-list li {
+    margin-bottom: 20px;
+  }
+  
+  .options-list li a {
+    display: block;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+ 
+  
+  .done-icon {
+    font-size: 48px;
+    margin: 10px;
+    color: #00b300;
+  }
+
+  
+  .file-upload-button {
+    cursor: pointer;
+  }
+  
+  .payment-options {
+    background-color: #5bc0de;
+  }
+  
+  .feedback-form {
+    background-color: #5bc0de;
+  }
+  
+  .internship-apply {
+    background-color: #5bc0de;
+  }
+  
+  .timetable {
+    background-color: #5bc0de;
+  }
+  
+  .course-page {
+    background-color: #5bc0de;
+  }
+  

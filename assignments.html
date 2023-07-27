@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RADS College - Assignment Submission</title>
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+     
+    }
+    .header {
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+    }
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .subject-table {
+      width: 100%;
+      margin-top: 30px;
+      border-collapse: collapse;
+    }
+    .subject-table th,
+    .subject-table td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    .subject-table th {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .subject-table input[type="file"] {
+      display: none;
+    }
+    .file-upload-label {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .file-upload-label:hover {
+      background-color: #0056b3;
+    }
+    .file-upload-label.disabled {
+      background-color: #ccc;
+      pointer-events: none;
+    }
+    .file-size-limit {
+      font-size: 12px;
+      color: #ff0000;
+      display: none;
+    }
+    .loading {
+      font-size: 24px;
+      margin: 10px;
+      display: none;
+    }
+    .done-icon {
+      font-size: 48px;
+      margin: 10px;
+      color: #00b300;
+      display: none;
+    }
+    .error-icon {
+      font-size: 48px;
+      margin: 10px;
+      color: #ff0000;
+      display: none;
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>RADS College</h1>
+  </div>
+  <div class="container">
+    <h2>Assignment Submission</h2>
+    <table class="subject-table">
+      <tr>
+        <td>Applied Stats (Mat 1008)</td>
+        <td>
+          <label class="file-upload-label">
+            Choose File
+            <input
+              type="file"
+              accept=".pdf,.doc,.docx,.txt"
+              data-max-size="500"
+              data-unit="KB"
+            />
+          </label>
+          <span class="file-size-limit"
+            >File size should be 500 KB or less</span
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>DBMS (CSE 2008)</td>
+        <td>
+          <label class="file-upload-label">
+            Choose File
+            <input
+              type="file"
+              accept=".pdf,.doc,.docx,.txt"
+              data-max-size="500"
+              data-unit="KB"
+            />
+          </label>
+          <span class="file-size-limit"
+            >File size should be 500 KB or less</span
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>OOPS (CSE 2005)</td>
+        <td>
+          <label class="file-upload-label">
+            Choose File
+            <input
+              type="file"
+              accept=".pdf,.doc,.docx,.txt"
+              data-max-size="500"
+              data-unit="KB"
+            />
+          </label>
+          <span class="file-size-limit"
+            >File size should be 500 KB or less</span
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>Basic Spanish (Frl 2010)</td>
+        <td>
+          <label class="file-upload-label">
+            Choose File
+            <input
+              type="file"
+              accept=".pdf,.doc,.docx,.txt"
+              data-max-size="500"
+              data-unit="KB"
+            />
+          </label>
+          <span class="file-size-limit"
+            >File size should be 500 KB or less</span
+          >
+        </td>
+      </tr>
+    
+    </table>
+    <button class="submit-button">Submit</button>
+    <div class="loading">Loading...</div>
+    <div class="done-icon">&#10004;</div>
+    <div class="error-icon">&#x2716;</div>
+  </div>
+
+  <script>
+    const fileInputs = document.querySelectorAll('input[type="file"]');
+    const submitButton = document.querySelector(".submit-button");
+    const loadingDiv = document.querySelector(".loading");
+    const doneIcon = document.querySelector(".done-icon");
+    const errorIcon = document.querySelector(".error-icon");
+
+    submitButton.addEventListener("click", () => {
+      const sizeLimit = 500 * 1024; 
+      let totalFileSize = 0;
+      let validFile = true;
+
+   
+      fileInputs.forEach((input) => {
+        const file = input.files[0];
+        if (file) {
+          totalFileSize += file.size;
+          if (file.size > sizeLimit) {
+            validFile = false;
+          }
+        }
+      });
+
+   
+      if (!validFile) {
+        alert("Oops! File size limit exceeded. File should be 500 KB or less.");
+      } else {
+      
+        loadingDiv.style.display = "block";
+        submitButton.disabled = true;
+        setTimeout(() => {
+          loadingDiv.style.display = "none";
+          submitButton.disabled = false;
+          if (totalFileSize > 0) {
+            doneIcon.style.display = "block";
+            errorIcon.style.display = "none";
+          } else {
+            doneIcon.style.display = "none";
+            errorIcon.style.display = "block";
+          }
+        }, 2000); 
+      }
+    });
+  </script>
+   </div>
+   <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <p>&copy; RADS College 2019-2025. All rights reserved.</p>
+    <p>Contact Us:</p>
+    <p>Email: Dean@radscollege.edu</p>
+    <p>Phone: +8800 98989</p>
+  </div>
+</body>
+</html>

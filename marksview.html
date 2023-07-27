@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Marks</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .header {
+        text-align: center;
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+      }
+      .header h1 {
+        font-size: 36px;
+        margin: 0;
+      }
+      .marks-table {
+        width: 100%;
+        margin-top: 30px;
+        border-collapse: collapse;
+      }
+      .marks-table th,
+      .marks-table td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+      .marks-table th {
+        background-color: #007bff;
+        color: #fff;
+      }
+      .dropdown-menu {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .dropdown-menu select {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Student Marks</h1>
+    </div>
+    <div class="container">
+      <div class="dropdown-menu">
+        <select id="semester-select" onchange="onSemesterChange()">
+          <option value="" selected disabled>Select Semester</option>
+          <option value="fastrack">Fastrack Fall 2023</option>
+          <option value="fall">Fall 2023</option>
+          <option value="win">Winter 2022</option>
+        </select>
+      </div>
+      <table class="marks-table" id="marks-table">
+        <tr>
+          <th>Subject</th>
+          <th>Professor Name</th>
+          <th>Student Name</th>
+          <th>Marks</th>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      function onSemesterChange() {
+        const selectedSemester =
+          document.getElementById("semester-select").value;
+        const marksTable = document.getElementById("marks-table");
+
+      
+        marksTable.innerHTML = `
+        <tr>
+          <th>Subject</th>
+          <th>Professor Name</th>
+          <th>Student Name</th>
+          <th>Marks</th>
+        </tr>
+      `;
+
+        if (selectedSemester === "fastrack") {
+          addMarksData("Basic Calculas", "Prof. Rashmi Dubey", "Mohammed Abid ", 45);
+          addMarksData("MAchine Learning ", "Prof.Sagar Dhanraj Pandey", "M ohammed Abid ", 88); 
+          addMarksData("Data Analytics", "Prof. T Sudhakar ", "Mohammed Abid ", 92);
+          addMarksData(
+            "Software Engineering",
+            "Prof. Anderson",
+            "Mohammed Abid ",
+            80
+          );
+        } else if (selectedSemester === "fall") {
+          addMarksData("Spanish ", "Prof. carlin", "Mohammed Abid ", 50);
+          addMarksData(
+            "Deep Learning",
+            "Prof. Sumathi D",
+            "Mohammed Abid ",
+            50
+          );
+          addMarksData(
+            "Applied Stats",
+            "Prof. Swathi mishra",
+            "Mohammed Abid ",
+            85
+          );
+          addMarksData(
+            "Data Structure and Algorithm",
+            "Prof.Sheela ",
+            "Mohammed Abid ",
+            76
+          );
+        } else if (selectedSemester === "win") {
+          addMarksData("COA", "Prof. pravveen maurya", "Mohammed Abid ", 82);
+          addMarksData(
+            "Digital Login design",
+            "Prof. Arvind Kumar Prajapati",
+            "Mohammed Abid ",
+            45
+          );
+          addMarksData(
+            "Parallel computing",
+            "Prof. Peeyush singh",
+            "Mohammed Abid ",
+            90
+          );
+          addMarksData(
+            "Theory of Computation",
+            "Prof. Deepti Godavarti",
+            "Mohammed Abid ",
+            98
+          );
+        }
+      }
+
+      function addMarksData(subject, professor, student, marks) {
+        const marksTable = document.getElementById("marks-table");
+        const newRow = document.createElement("tr");
+        newRow.innerHTML = `
+        <td>${subject}</td>
+        <td>${professor}</td>
+        <td>${student}</td>
+        <td>${marks}</td>
+      `;
+        marksTable.appendChild(newRow);
+      }
+    </script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    
+    </head>
+    <body>
+      <div class="header">
+     
+      </div>
+      <div class="container">
+ 
+      </div>
+      <footer class="footer">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <p>&copy; RADS College 2019-2025. All rights reserved.</p>
+            <p>Contact Us:</p>
+            <p>Email: Dean@radscollege.edu</p>
+            <p>Phone: +91 6303056564</p>
+          </div>
+        </footer>
+      <script>
+       
+      </script>
+    </body>
+    </html>
+  </body>
+</html>

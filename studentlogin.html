@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RASP College Management System - Login</title>
+  <style>
+    body {
+       
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    gap: 20px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-form {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-group input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    .login-option {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .login-option a {
+      color: #007bffa9;
+      text-decoration: none;
+    }
+    .login-option a:hover {
+      text-decoration: underline;
+    }
+    .login-heading {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #007BFF;
+    }
+    /* Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animated {
+      animation-fill-mode: both;
+      animation-duration: 1s;
+    }
+    .logon{
+      
+      text-align: center;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      height: 50px;
+  
+
+    }
+    body{
+      width: 100%;
+      background-size: cover;
+      background-image: url(.jpg);
+    }
+    button{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 25px;
+      color: white;
+height: 50px;
+      background-color: #4CAF50;
+      border: 0px;
+    }
+    button:hover{
+      background-color: #45a049;
+    }
+  </style>
+  <script>
+    
+					function cancelBooking() {
+					  window.location.href = "functionalities.html";
+					}
+					</script>
+                
+
+			
+				
+  </script>
+</head>
+<body>
+    <h2 class="login-heading">RADS College Management System</h2>
+  <div class="container">
+    <form class="login-form animated" style="animation-delay: 0.3s;">
+    
+      <div class="form-group">
+        <label for="student-regno">Registration Number:</label>
+        <input type="text" id="student-regno" placeholder="Enter your Registration Number" required>
+      </div>
+      <div class="form-group">
+        <label for="student-password">Password:</label>
+        <input type="password" id="student-password" placeholder="Enter your Password" required>
+      </div>
+      <div class="logon">
+        <button type="button" onclick="cancelBooking()">Student Login</button>
+      </div>
+      <div class="login-option">
+        <a href="COLLEGEDEPT.HTML">Forgot Password?</a>
+      </div>
+    </form>
+   
+</body>
+</html>
+
